@@ -12,7 +12,7 @@ int main(void) {
     double tolerance, limit, current, add;
 
     limit = 4./5.;
-    tolerance = 1e-12;
+    tolerance = 1e-5;
     current = add = 1.;
 
     printf("Verifying that the series 1 - 2^(-2) + 2^(-4) - 2^(-6) + ... converges to %1.1f,\n" \
@@ -22,6 +22,10 @@ int main(void) {
 
         add *= -.25;
         current += add;
+        printf("term is %f \n", current);
+        if (fabs(current - limit) < tolerance) {
+          break;
+        }
     }
 
     if (fabs(current - limit) > tolerance) {
