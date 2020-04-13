@@ -2,24 +2,6 @@
 #include <stdlib.h>
 #include "helper_functions.h"
 
-int minimum(int a, int b) {
-     //borrowed from Xing
-     return (a > b) ? b : a;
-}
-
-int min_idx(int *vec, int n) {
-     int i, min, index;
-     min = vec[0];
-     index = 0;
-     for (i = 1; i < n; i++) {
-          if (vec[i] < min) {
-               index = i;
-               min = vec[i];
-          }
-     }
-     return index;
-}
-
 char** matrix_2d (int row, int col){
      char** A = malloc(row * sizeof(char *));
      char* flat_matrix = malloc(row * col* sizeof(char));
