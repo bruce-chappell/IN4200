@@ -21,7 +21,7 @@
   * data - folder containing data files
 ## Compiling and Running ##
 * COMPILING- run the command 'make'. This will generate the executable final_out.exe
-  * The Makefile specifies gcc-9
+  * The Makefile specifies gcc-9 and OpenMP is needed for the parallel functions
 * RUNNING- ./final_out.exe 'parallel or serial' 'full_matrix or CRS' 'number of threads'
   * In the quote statements above you pick either parallel or serial, full_matrix or CRS, and an int (num threads) for arguements. I couldn't figure out command line syntax for markdown
 * you can change the data file and the desired N for top_n_webpages in the main file
