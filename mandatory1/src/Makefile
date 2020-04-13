@@ -2,7 +2,7 @@ CC = gcc-9
 CFLAGS = -Wall -fopenmp -g
 OBJS = tools.o test_functions.o top_n_webpages.o count_mutual_links2.o count_mutual_links1.o $\
 read_graph_from_file2.o read_graph_from_file1.o main.o
-PROG = final_out
+PROG = final_out.exe
 
 all:$(PROG)
 
