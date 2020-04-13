@@ -19,14 +19,17 @@ void top_n_webpages (int num_webpages, int *num_involvements, int N){
      }
      int *top_vals = array_zeros(N);
      int *top_idx = array_zeros(N);
-
+     //loop over all the webpages involvement counts
      for (int i = 0; i < num_webpages; i++){
+          //loop over top_vals
           for (int j = 0; j < N; j++){
                if (num_involvements[i] >= top_vals[j]){
+                    //move trailing values down one spot
                     for (int z = N-1; z > j; z--){
                          top_vals[z] = top_vals[z-1];
                          top_idx[z] = top_idx[z-1];
                     }
+                    //insert num_involvements values
                     top_vals[j] = num_involvements[i];
                     top_idx[j] = i;
                     break;
